@@ -1,6 +1,7 @@
 package com.cnn.pages;
 
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pnt.automation.base.TestBase;
@@ -44,7 +45,14 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "(//button[@class='Flex-sc-1sqrs56-0 sc-jKJlTe eaiROF'])[1]")
     private WebElement clickOnSearch;
 
+@FindBy(xpath = "(//span[@class='ob-unit ob-rec-text'])[1]")
+private WebElement scrollToVideo;
 
+     @FindBy(xpath = "(//a[@name='politics'])[3]")
+     private WebElement politicsTab;
+
+     @FindBy(xpath = "//a[@class='Text-sc-1amvtpj-0-a Link-sc-1hkqz5e-0 sc-gZMcBi cSkDDV']")
+     private WebElement politicsLogo;
 
     public void clickOnWorldTab(){
         worldTab.click();
@@ -101,4 +109,17 @@ public class HomePage extends TestBase {
     }
 
 
+    public void scrollDown(){
+
+       // scroll(politicsTab);
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeAsyncScript("window.scrollBy(0,500)");
+
+
+    }
+
+    public void clickOnPolitics(){
+        politicsTab.click();
+        Assert.assertTrue(politicsLogo.isDisplayed());
+    }
 }
