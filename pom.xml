@@ -13,6 +13,9 @@
         <module>Amazon</module>
 
         <module>Cnn</module>
+
+        <module>CitiBank</module>
+        <module>facebook</module>
     </modules>
 
     <properties>
