@@ -1,6 +1,6 @@
 package com.cnntest;
 
-import com.cnn.pages.HomePage;
+import com.facebook.pages.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import pnt.automation.base.TestBase;

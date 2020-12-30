@@ -1,4 +1,4 @@
-package com.cnn.data;
+package com.facebook.data;
 
 public class DataProvider {
 }

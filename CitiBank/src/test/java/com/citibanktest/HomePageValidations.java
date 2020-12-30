@@ -44,7 +44,7 @@ public class HomePageValidations extends TestBase {
         homePage.clickOnCareersTab();
     }
 
-    @Test
+    @Test(enabled = false)
     public void userBeingAbleToClickLinkedinTab() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickMatchJobsWithLinkedinTab();
